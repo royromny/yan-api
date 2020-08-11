@@ -15,8 +15,11 @@ import (
 func Ping(c *gin.Context) {
 	c.JSON(200, serializer.Response{
 		Code: 0,
-		Msg:  "Pong1",
+		Msg:  "Pong",
 	})
+	//c.JSON(200, serializer.BuildResponse("pong pong"))
+	//c.JSON(200, serializer.BuildListResponse(40000, "返回成功", "error l", nil, 0))
+
 }
 
 // CurrentUser 获取当前用户
