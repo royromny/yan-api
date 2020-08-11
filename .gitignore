@@ -1,0 +1,6 @@
+.vscode/
+.env
+go.sum
+.exe
+.gitignore
+.idea
