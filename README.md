@@ -5,7 +5,7 @@ yan_api: 言项目的后端api程序
 
 ## 言项目的资料
 
-[言项目的资料](https://www.yuque.com/books/share/e96b3f14-1746-4780-b4b1-c09fa23820b7?# 《yan》)
+[言项目的资料](https://www.yuque.com/books/share/e96b3f14-1746-4780-b4b1-c09fa23820b7)
 
 ## 视频实况教程
 
