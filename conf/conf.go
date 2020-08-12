@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
+	"yan_api/model"
 )
 
 type DataStruct struct {
@@ -41,7 +42,11 @@ func init() {
 	//}
 
 	// 连接数据库
-	//model.Database(os.Getenv("MYSQL_DSN"))
+	dataMysql := Data.MySql
+	mysqlString := dataMysql.User + ":" +
+		dataMysql.Password + "@/" +
+		dataMysql.Dbname + "?charset=utf8&parseTime=True&loc=Local"
+	model.Database(mysqlString)
 	//cache.Redis()
 }
 

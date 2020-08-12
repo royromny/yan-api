@@ -10,7 +10,6 @@ import (
 func main() {
 	fmt.Printf("%+v\n", conf.Data)
 
-	fmt.Printf("%v\n", conf.Data.MySql.User)
 	// 装载路由
 	r := server.NewRouter()
 	r.Run(":3000")
