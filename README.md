@@ -3,7 +3,10 @@
 这是一个开发项目的分享视频。做一个社交交友项目。把其中的全部流程分享出来。
 yan_api: 言项目的后端api程序
 
-## 言项目的资料
+## 言 项目的资料
+包括：
+[项目思维导图](https://www.yuque.com/docs/share/2b643335-2fad-4582-8e6b-249bf01239d6)
+[视频流程目录](https://www.yuque.com/docs/share/b8058c87-3eaa-442f-a0f0-e3765dde183b)
 
 [言项目的资料](https://www.yuque.com/books/share/e96b3f14-1746-4780-b4b1-c09fa23820b7)
 
