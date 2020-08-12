@@ -1,14 +1,16 @@
 package main
 
 import (
+	"fmt"
+	"yan_api/conf"
 	_ "yan_api/conf"
 	"yan_api/server"
 )
 
 func main() {
-	// 从配置文件读取配置
-	//conf.Init()
+	fmt.Printf("%+v\n", conf.Data)
 
+	fmt.Printf("%v\n", conf.Data.MySql.User)
 	// 装载路由
 	r := server.NewRouter()
 	r.Run(":3000")

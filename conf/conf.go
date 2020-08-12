@@ -1,7 +1,34 @@
 package conf
 
-// Init 初始化配置项
-func Init() {
+import (
+	"fmt"
+	"gopkg.in/yaml.v2"
+	"io/ioutil"
+)
+
+type DataStruct struct {
+	MySql struct {
+		Host     string
+		Port     string
+		User     string
+		Password string
+		Dbname   string
+	}
+	Redis struct {
+		Db string
+	}
+}
+
+var Data = new(DataStruct)
+
+// init 初始化配置项
+func init() {
+	fmt.Println("init")
+	// 获取配置文件
+	if initConf() != nil {
+		fmt.Println("init error")
+		return
+	}
 	// 从本地读取环境变量
 	//godotenv.Load()
 
@@ -16,4 +43,17 @@ func Init() {
 	// 连接数据库
 	//model.Database(os.Getenv("MYSQL_DSN"))
 	//cache.Redis()
+}
+
+func initConf() error {
+	data, err := ioutil.ReadFile("conf/conf.yaml")
+	if err != nil {
+		return err
+	}
+
+	err = yaml.Unmarshal(data, Data)
+	if err != nil {
+		return err
+	}
+	return nil
 }
