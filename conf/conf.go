@@ -1,10 +1,10 @@
 package conf
 
 import (
-	"fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"yan_api/model"
+	"yan_api/util"
 )
 
 type DataStruct struct {
@@ -15,7 +15,8 @@ type DataStruct struct {
 		Password string
 		Dbname   string
 	}
-	Redis struct {
+	LogLever string
+	Redis    struct {
 		Db string
 	}
 }
@@ -24,17 +25,16 @@ var Data = new(DataStruct)
 
 // init 初始化配置项
 func init() {
-	fmt.Println("init")
 	// 获取配置文件
 	if initConf() != nil {
-		fmt.Println("init error")
+		util.Log().Panic("init error")
 		return
 	}
-	// 从本地读取环境变量
-	//godotenv.Load()
 
 	// 设置日志级别
-	//util.BuildLogger(os.Getenv("LOG_LEVEL"))
+	util.BuildLogger(Data.LogLever)
+	//err := errors.New("test log")
+	//util.LogD("失败 logD %+v", err)
 
 	// 读取翻译文件
 	//if err := LoadLocales("conf/locales/zh-cn.yaml"); err != nil {
