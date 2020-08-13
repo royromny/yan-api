@@ -6,13 +6,23 @@ yan_api: 言项目的后端api程序
 ![项目思维导图](https://github.com/royromny/yan-api/blob/master/assets/img/%E9%A1%B9%E7%9B%AE%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.jpg?raw=true)
 
 ## 言 项目的资料
-包括：
+### 语雀资料包括：
+[言项目的资料](https://www.yuque.com/books/share/e96b3f14-1746-4780-b4b1-c09fa23820b7)
+
 [项目思维导图](https://www.yuque.com/docs/share/2b643335-2fad-4582-8e6b-249bf01239d6)
 [视频流程目录](https://www.yuque.com/docs/share/b8058c87-3eaa-442f-a0f0-e3765dde183b)
 
-[言项目的资料](https://www.yuque.com/books/share/e96b3f14-1746-4780-b4b1-c09fa23820b7)
+## 视频实况分享流程
+### 已完成
+a. 【yan】#2a-后端语言： golang ，使用轻量级框架： gin ，使用落地代码框架： singo。
+b. 【yan】#2b-调整封装框架的返回。
+c. 【yan】#2c-项目配置文件，处理软件配置方法，用ymal。
+d. 【yan】#2d-链接数据库，gorm链接数据库和自动迁移，mysql。
 
-## 视频实况教程
+### 计划中
+e. 【yan】#2e-接收请求，GET、POST、PUT、DELETE，接收json数据并反序列化到结构体并验证。
+f. 【yan】#2f-模型中基本的增删改查。
+g. 【yan】#2g-请求接口的监权，session使用，RBAC模型。
 
 ## 目的
 
