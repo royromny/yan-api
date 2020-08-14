@@ -18,10 +18,10 @@ yan_api: 言项目的后端api程序
 - b. 【yan】#2b-调整封装框架的返回。[头条](https://www.ixigua.com/i6859648336010576398/) | [b站](https://www.bilibili.com/video/BV1uA411e7X9/)
 - c. 【yan】#2c-项目配置文件，处理软件配置方法，用ymal。[头条](https://www.ixigua.com/i6859999281500127755/) | [b站](https://www.bilibili.com/video/BV1Vf4y197Zs/)
 - d. 【yan】#2d-链接数据库，gorm链接数据库和自动迁移，mysql。[头条](https://www.ixigua.com/i6860010156923552270/) | [b站](https://www.bilibili.com/video/BV1xZ4y1M76D/)
+- e. 【yan】#2e-日志管理，logger。[头条](https://www.ixigua.com/i6860435086181925387/) | [b站](https://www.bilibili.com/video/BV1Gp4y1v7TE/)
+- f. 【yan】#2f-接收请求，GET、POST、PUT、DELETE，接收json数据并反序列化到结构体并验证。[头条](https://www.ixigua.com/i6860475245216662019/) | [b站](https://www.bilibili.com/video/BV15C4y1t7ZW/)
 
 ### 计划中
-- e. 【yan】#2b-日志管理，logger。
-- f. 【yan】#2e-接收请求，GET、POST、PUT、DELETE，接收json数据并反序列化到结构体并验证。
 - g. 【yan】#2f-模型中基本的增删改查。
 - h. 【yan】#2g-请求接口的监权，session使用，RBAC模型。
 

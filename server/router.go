@@ -22,6 +22,12 @@ func NewRouter() *gin.Engine {
 	{
 		v1.POST("ping", api.Ping)
 
+		// 测试接口
+		v1.GET("t_api/:id", api.TApiGet)
+		v1.POST("t_api", api.TApiPost)
+		v1.PUT("t_api/:id", api.TApiPut)
+		v1.DELETE("t_api/:id", api.TApiDelete)
+
 		// 用户登录
 		v1.POST("user/register", api.UserRegister)
 

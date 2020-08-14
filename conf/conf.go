@@ -35,7 +35,7 @@ func init() {
 	util.BuildLogger(Data.LogLever)
 	//err := errors.New("test log")
 	//util.LogD("失败 logD %+v", err)
-
+	util.LogD("Data", Data)
 	// 读取翻译文件
 	//if err := LoadLocales("conf/locales/zh-cn.yaml"); err != nil {
 	//	util.Log().Panic("翻译文件加载失败", err)

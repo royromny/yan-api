@@ -105,6 +105,6 @@ func Log() *Logger {
 	return logger
 }
 
-func LogD(format string, v ...interface{}) {
-	Log().Debug(format, v...)
+func LogD(title string, v ...interface{}) {
+	Log().Debug("========["+title+"]： %+v", v...)
 }

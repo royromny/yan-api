@@ -22,9 +22,13 @@ type TrackedErrorResponse struct {
 // 四开头的五位数错误编码为客户端错误，有时候是客户端代码写错了，有时候是用户操作错误
 const (
 	CodeSuccess       = 20000 // 查询成功
-	CodeUpdateSuccess = 20001 // 更新成功
+	CodeCreateSuccess = 20001 // 查询成功
+	CodeUpdateSuccess = 20002 // 更新成功
+	CodeDeleteSuccess = 20003 // 删除成功
 	CodeCheckError    = 40000 // 查询错误
-	CodeUpdate        = 50001 // 更新错误
+	CodeCreateError   = 40001 // 新增错误
+	CodeUpdateError   = 40002 // 更新错误
+	CodeDeleteError   = 40003 // 删除错误
 
 	// CodeCheckLogin 未登录
 	CodeCheckLogin = 401
