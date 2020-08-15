@@ -48,6 +48,7 @@ type DataList struct {
 	Total uint        `json:"total"`
 }
 
+// BuildResponse 一般请求构建器
 func BuildResponse(data interface{}) *Response {
 	return &Response{
 		Data:  data,
@@ -57,6 +58,7 @@ func BuildResponse(data interface{}) *Response {
 	}
 }
 
+// BuildResponseGet 查询单行数据构建器
 func BuildResponseGet(data interface{}) *Response {
 	return &Response{
 		Data:  data,
@@ -66,7 +68,7 @@ func BuildResponseGet(data interface{}) *Response {
 	}
 }
 
-// BuildListResponse 列表构建器
+// BuildListResponse 查询列表构建器
 func BuildListResponse(err string, items interface{}, total uint) *Response {
 	return &Response{
 		Data: DataList{
