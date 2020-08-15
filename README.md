@@ -20,10 +20,11 @@ yan_api: 言项目的后端api程序
 - d. 【yan】#2d-链接数据库，gorm链接数据库和自动迁移，mysql。[头条](https://www.ixigua.com/i6860010156923552270/) | [b站](https://www.bilibili.com/video/BV1xZ4y1M76D/)
 - e. 【yan】#2e-日志管理，logger。[头条](https://www.ixigua.com/i6860435086181925387/) | [b站](https://www.bilibili.com/video/BV1Gp4y1v7TE/)
 - f. 【yan】#2f-接收请求，GET、POST、PUT、DELETE，接收json数据并反序列化到结构体并验证。[头条](https://www.ixigua.com/i6860475245216662019/) | [b站](https://www.bilibili.com/video/BV15C4y1t7ZW/)
+- g. 【yan】#2g-模型中基本的增删改查。[头条](https://www.ixigua.com/i6860806601721250311/) | [b站](https://www.bilibili.com/video/BV1Kt4y1Q7nA/)
+- h. 【yan】#2h-golang编程，RESTful返回结果序列化json。
 
 ### 计划中
-- g. 【yan】#2f-模型中基本的增删改查。
-- h. 【yan】#2g-请求接口的监权，session使用，RBAC模型。
+- i. 【yan】#2h-请求接口的监权，session使用，RBAC模型。
 
 ## 目的
 

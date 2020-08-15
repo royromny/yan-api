@@ -24,6 +24,7 @@ func NewRouter() *gin.Engine {
 
 		// 测试接口
 		v1.GET("t_api/:id", api.TApiGet)
+		v1.GET("t_apis", api.TApiGetList)
 		v1.POST("t_api", api.TApiPost)
 		v1.PUT("t_api/:id", api.TApiPut)
 		v1.DELETE("t_api/:id", api.TApiDelete)

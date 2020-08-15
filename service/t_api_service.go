@@ -32,12 +32,20 @@ func (c *TApiService) Get(id string) *serializer.Response {
 			Error: err.Error(),
 		}
 	}
+	return serializer.BuildResponseGet(serializer.BuildTApi(&tApi))
+}
 
-	return &serializer.Response{
-		Code: serializer.CodeCreateSuccess,
-		Msg:  "查询成功",
-		Data: tApi,
+func (c *TApiService) GetList(offset, limit int64) *serializer.Response {
+	tApis, err := model.GetAllTApi(offset, limit)
+	if err != nil {
+		return &serializer.Response{
+			Code:  serializer.CodeCreateError,
+			Msg:   "查询失败",
+			Error: err.Error(),
+		}
 	}
+	items, total := serializer.BuildTApis(tApis)
+	return serializer.BuildListResponse("", items, total)
 }
 
 func (c *TApiService) Create() *serializer.Response {

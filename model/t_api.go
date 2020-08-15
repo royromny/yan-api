@@ -15,6 +15,11 @@ func GetTApi(tApi *TApi, id string) error {
 	return DB.Find(tApi, id).Error
 }
 
+func GetAllTApi(offset, limit int64) (tApis []TApi, err error) {
+	err = DB.Offset(offset).Limit(limit).Find(&tApis).Error
+	return tApis, err
+}
+
 func CreateTApi(tApi *TApi) error {
 	return DB.Create(tApi).Error
 }

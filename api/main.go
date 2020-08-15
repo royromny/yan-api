@@ -28,6 +28,12 @@ func TApiGet(c *gin.Context) {
 	c.JSON(200, service.Get(c.Param("id")))
 }
 
+// TApi测试接口获取列表
+func TApiGetList(c *gin.Context) {
+	var service service.TApiService
+	c.JSON(200, service.GetList(0, 2))
+}
+
 // TApi 新增接口
 func TApiPost(c *gin.Context) {
 	var service service.TApiService

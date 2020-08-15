@@ -22,7 +22,7 @@ type TrackedErrorResponse struct {
 // 四开头的五位数错误编码为客户端错误，有时候是客户端代码写错了，有时候是用户操作错误
 const (
 	CodeSuccess       = 20000 // 查询成功
-	CodeCreateSuccess = 20001 // 查询成功
+	CodeCreateSuccess = 20001 // 新增成功
 	CodeUpdateSuccess = 20002 // 更新成功
 	CodeDeleteSuccess = 20003 // 删除成功
 	CodeCheckError    = 40000 // 查询错误
@@ -48,8 +48,8 @@ type DataList struct {
 	Total uint        `json:"total"`
 }
 
-func BuildResponse(data interface{}) Response {
-	return Response{
+func BuildResponse(data interface{}) *Response {
+	return &Response{
 		Data:  data,
 		Code:  CodeSuccess,
 		Msg:   "请求成功",
@@ -57,15 +57,24 @@ func BuildResponse(data interface{}) Response {
 	}
 }
 
+func BuildResponseGet(data interface{}) *Response {
+	return &Response{
+		Data:  data,
+		Code:  CodeSuccess,
+		Msg:   "查询成功",
+		Error: "",
+	}
+}
+
 // BuildListResponse 列表构建器
-func BuildListResponse(code int, msg, err string, items interface{}, total uint) Response {
-	return Response{
+func BuildListResponse(err string, items interface{}, total uint) *Response {
+	return &Response{
 		Data: DataList{
 			Items: items,
 			Total: total,
 		},
-		Code:  code,
-		Msg:   msg,
+		Code:  CodeSuccess,
+		Msg:   "查询成功",
 		Error: err,
 	}
 }
